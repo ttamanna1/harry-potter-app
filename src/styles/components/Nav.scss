@@ -1,0 +1,12 @@
+
+.nav-toggle {
+  background: none;
+  border: none;
+  span {
+    height: 3px;
+    display: block;
+    width: 40px;
+    background: $red;
+    margin-bottom: 3px;
+  }
+}

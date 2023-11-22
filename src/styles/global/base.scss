@@ -1,0 +1,33 @@
+
+body{
+  margin: 0;
+  background-color: black;
+  color: $yellow;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  @extend %flex-fill;
+}
+
+.centred {
+  @extend %flex-fill;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-red {
+  background-color: $red;
+  color: $yellow;
+  border: 1px solid $red;
+  &:hover{
+    background-color: transparent;
+    color: $red;
+    border: 1px solid $red;
+  }
+}
