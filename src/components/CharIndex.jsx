@@ -8,7 +8,6 @@ import Col from 'react-bootstrap/Col'
 
 export default function CharCard() {
   const char = useLoaderData()
-  console.log(char)
   const charWithImg = char.filter(char => char.image)
 
 
@@ -46,7 +45,7 @@ export default function CharCard() {
         const housesArr = [...new Set(charWithImg.map(char => char.house))]
         setHouses(housesArr)
       }
-    }, [filters, charWithImg, filteredHouses])
+    }, [filters])
 
 
   return (

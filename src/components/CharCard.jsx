@@ -7,22 +7,24 @@ export default function CharCard(){
   console.log(image, name, house, wizard, patronus, wand)
 
   return (
-    <div className='card-wrapper'>
-      <div className="card" style={{ width: '18rem' }}>
-        <img className="card-img-top" src={image} alt="Card image"/>
-        <div className="card-body">
-          <h5 className="card-title">{name}</h5>
+    <>
+      <div className='card-wrapper'>
+        <div className="card">
+          <img className="card-img-top" src={image} alt="Card image"/>
+          <div className="card-body">
+            <h5 className="card-title">{name}</h5>
+          </div>
+          <ul className="list-group list-group-flush">
+            <li className="list-group-item">Wizard: {wizard ? 'Yes' : 'No'}</li>
+            <li className="list-group-item">House: {house ? house : 'N/A'}</li>
+            <li className="list-group-item">Patronus: {patronus ? patronus : 'N/A'}</li>
+            <li className="list-group-item">Wand Material: {wand.wood ? wand.wood : 'N/A' }</li>
+            <li className="list-group-item">Wand Core: {wand.core ? wand.core : 'N/A' }</li>
+            <li className="list-group-item">Wand Length: {wand.length ? `${wand.length} inches` : 'N/A' }</li>
+          </ul>
         </div>
-        <ul className="list-group list-group-flush">
-          <li className="list-group-item">Wizard: {wizard ? 'Yes' : 'No'}</li>
-          <li className="list-group-item">House: {house ? house : 'N/A'}</li>
-          <li className="list-group-item">Patronus: {patronus ? patronus : 'N/A'}</li>
-          <li className="list-group-item">Wand Material: {wand.wood ? wand.wood : 'N/A' }</li>
-          <li className="list-group-item">Wand Core: {wand.core ? wand.core : 'N/A' }</li>
-          <li className="list-group-item">Wand Length: {wand.length ? `${wand.length} inches` : 'N/A' }</li>
-        </ul>
+        <Link className='btn btn-red mt-5' to="/charIndex">Back</Link>
       </div>
-      <Link className='btn btn-blue mt-4' to="/charIndex">Back</Link>
-    </div>
+    </>
   )
 }
