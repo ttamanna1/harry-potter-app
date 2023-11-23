@@ -1,9 +1,13 @@
 #error-page {
   @include flex-center(row);
+
+  p{
+    font-size: 50px;
+    text-align: center;
+  }
 }
 
 #root {
   display: flex;
   justify-content: space-between;
-
 }

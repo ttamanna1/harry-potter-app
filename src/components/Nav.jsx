@@ -22,8 +22,8 @@ export default function Nav(){
       <Modal show={show} fullscreen={true} onHide={() => setShow(false)}>
         <Modal.Header closeButton>
           <nav onClick={() => setShow(false)}>
-            <Link to="/"><i className='bold display-2'>Home</i></Link>
-            <Link to="/charIndex"><i className='bold display-2'>Characters</i></Link>
+            <Link to="/"><i>Home</i></Link>
+            <Link to="/charIndex"><i>Characters</i></Link>
           </nav>
         </Modal.Header>
       </Modal>

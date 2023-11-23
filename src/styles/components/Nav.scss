@@ -10,3 +10,28 @@
     margin-bottom: 3px;
   }
 }
+
+.modal {
+  height: 10vw;
+}
+
+.modal-header {
+  height: 10vw;
+  background: $red;
+  button {
+    position: absolute;
+    top: 2.5rem;
+    right: 2rem;
+    color: $yellow;
+  }
+  nav {
+    @include flex(row, left, left);
+    a, span {
+      color: $yellow;
+      text-decoration: none;
+      cursor: pointer;
+      margin-right: 2rem;
+      font-size: 55px;
+    }
+  }
+}

@@ -8,6 +8,8 @@ export default function CharCard(){
 
   return (
     <>
+    {/* <img src="src/styles/images/harry-potter-logo.png"  alt='house image' style={{width: '20rem'}}/> */}
+    {/* <img src={`src/styles/images/${house}.png`}/> */}
       <div className='card-wrapper'>
         <div className="card">
           <img className="card-img-top" src={image} alt="Card image"/>
@@ -23,7 +25,8 @@ export default function CharCard(){
             <li className="list-group-item">Wand Length: {wand.length ? `${wand.length} inches` : 'N/A' }</li>
           </ul>
         </div>
-        <Link className='btn btn-red mt-5' to="/charIndex">Back</Link>
+        <Link className='btn btn-red back' to="/charIndex">Back</Link>
+        {/* <img src="src/styles/images/harry-potter-logo.png"  alt='house image' style={{width: '20rem'}}/> */}
       </div>
     </>
   )

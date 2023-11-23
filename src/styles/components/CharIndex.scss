@@ -8,7 +8,7 @@
     text-decoration: none;
     color: $yellow;
     transition: background-size 0.2s;
-
+    font-size: 35px;
     // Effects
     &:hover {
       background-size: 45%;
@@ -32,12 +32,14 @@
 }
 
 #dropdown, #search {
-  height: 40px;
-  width: 200px;
-  border: 10px solid $red;
-  margin-left: 12px;
+  height: 45px;
+  width: 180px;
+  border: 1px solid $red;
+  margin-left: 35px;
+  padding-left: 1rem;
   background-color: $red;
   color: $yellow;
+  font-size: 35px;
 }
 
 #search::placeholder {

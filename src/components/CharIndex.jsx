@@ -50,7 +50,7 @@ export default function CharCard() {
 
   return (
     <>
-      <h1 className='text-center bold display-3 mb-4'>Characters</h1>
+      <h1 className='text-center bold display-1 mb-4'>Characters</h1>
       <Container fluid>
         <Row>
           <Col xs={6} md={4} lg={3}>

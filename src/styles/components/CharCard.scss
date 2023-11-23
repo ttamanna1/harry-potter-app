@@ -1,19 +1,28 @@
 .card-wrapper {
   @include flex-center(column);
-
+  // display: none;
   .card {
     width: 18rem;
-    font-family: cursive;
     text-transform: capitalize;
+    .card-body {
+      padding: 0.5rem 0;
+    }
     .card-title {
       text-align: center;
+      font-size: 35px;
       font-weight: bolder;
-    }
-    .card-img-top{
-      height: 20rem;
+      margin: 0;
     }
   }
-  
+}
+
+.back {
+  margin-top: 1.5rem;
+  width: 3em;
+}
+
+.list-group-item {
+    padding: 0.2rem 1rem;
 }
 
 
