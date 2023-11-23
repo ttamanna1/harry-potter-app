@@ -8,12 +8,13 @@ import Col from 'react-bootstrap/Col'
 export default function CharCard(){
   const char = useLoaderData()
   console.log(char)
+  const charWithImg = char.filter(char => char.image)
   return (
     <>
       <h1 className='text-center bold display-3 mb-4'>Characters</h1>
       <Container fluid>
         <Row className='character-list'>
-          { char.map(char => {
+          { charWithImg.map(char => {
             const { id, name, image } = char
             return (
               <Col 

@@ -4,6 +4,6 @@ export async function getAllChars(){
 }
 
 export async function getSingleChar(id){
-  const res = await fetch(`https://hp-api.onrender.com/api/characters${id}`)
+  const res = await fetch(`https://hp-api.onrender.com/api/character/${id}`)
   return res.json()
 }
