@@ -51,21 +51,23 @@ export default function CharCard() {
   return (
     <>
       <h1 className='text-center bold display-3 mb-4'>Characters</h1>
-
-      <div id="filters">
-      <select name="house" value={filters.house} onChange={handleChange}>
-        <option value="All">All</option>
-        {/* Render the options */}
-        { houses.length > 0 &&
-          houses.map(house => {
-            return <option key={house} value={house}>{house}</option>
-          })
-        }
-      </select>
-      <input name="search" placeholder='Search...' value={filters.search} onChange={handleChange} />
-    </div>
-
       <Container fluid>
+        <Row>
+          <Col xs={6} md={4} lg={3}>
+          <select id="dropdown" name="house" value={filters.house} onChange={handleChange}>
+            <option value="All">All</option>
+            {/* Render the options */}
+            { houses.length > 0 &&
+              houses.map(house => {
+                return <option key={house} value={house}>{house}</option>
+              })
+            }
+          </select>
+          </Col>
+          <Col xs={6} md={4} lg={3}>
+            <input id="search" name="search" placeholder='Search...' value={filters.search} onChange={handleChange} />
+          </Col>
+        </Row>
         <Row className='character-list'>
           { filteredHouses.length > 0 &&
           filteredHouses.map(char => {

@@ -1,6 +1,6 @@
 .character-list {
   a {
-    height: 33.33vw;
+    height: 45vw;
     background-position: center;
     background-repeat: no-repeat;
     background-size: 40%;
@@ -11,11 +11,18 @@
 
     // Effects
     &:hover {
-      background-size: 55%;
+      background-size: 45%;
     }
 
     // Media queries
-    @media (min-width: 768px){
+    @media (min-width: 768px) {
+      background-size: 60%;
+      &:hover {
+        background-size: 65%;
+      }
+    }
+
+    @media (min-width: 992px) {
       background-size: 80%;
       &:hover {
         background-size: 90%;
@@ -23,3 +30,12 @@
     }
   }
 }
+
+#dropdown, #search {
+  height: 40px;
+  width: 200px;
+  border: 10px solid $red;
+  margin-left: 12px;
+  
+}
+
