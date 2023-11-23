@@ -1,0 +1,31 @@
+.card-wrapper {
+  @include flex-center(column);
+
+  .card {
+    font-family: cursive;
+    text-transform: capitalize;
+    .card-title {
+      text-align: center;
+    }
+    .card-img-top{
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
+  
+  .btn-blue {
+    background-color: $dark-yellow;
+    color: $light;
+    border: 1px solid $dark-yellow;
+    &:hover{
+      background-color: transparent;
+      color: $yellow;
+      border: 1px solid $yellow;
+    }
+  }
+  
+}
+
+
+

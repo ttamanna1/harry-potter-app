@@ -7,7 +7,7 @@ export default function CharCard(){
   console.log(image, name, house, wizard, patronus, wand)
 
   return (
-    <>
+    <div className='card-wrapper'>
       <div className="card" style={{ width: '18rem' }}>
         <img className="card-img-top" src={image} alt="Card image"/>
         <div className="card-body">
@@ -17,12 +17,12 @@ export default function CharCard(){
           <li className="list-group-item">Wizard: {wizard ? 'Yes' : 'No'}</li>
           <li className="list-group-item">House: {house ? house : 'N/A'}</li>
           <li className="list-group-item">Patronus: {patronus ? patronus : 'N/A'}</li>
-          <li className="list-group-item">Wand Material: {wand.wood ? `Wood: ${wand.wood}` : 'N/A' }</li>
-          <li className="list-group-item">Wand Core: {wand.core ? `Wood: ${wand.core}` : 'N/A' }</li>
-          <li className="list-group-item">Wand Length: {wand.length ? `Wood: ${wand.length}` : 'N/A' }</li>
+          <li className="list-group-item">Wand Material: {wand.wood ? wand.wood : 'N/A' }</li>
+          <li className="list-group-item">Wand Core: {wand.core ? wand.core : 'N/A' }</li>
+          <li className="list-group-item">Wand Length: {wand.length ? `${wand.length} inches` : 'N/A' }</li>
         </ul>
       </div>
-      <Link className='btn btn-blue' to="/charIndex">Back</Link>
-    </>
+      <Link className='btn btn-blue mt-4' to="/charIndex">Back</Link>
+    </div>
   )
 }
