@@ -36,6 +36,18 @@
   width: 200px;
   border: 10px solid $red;
   margin-left: 12px;
-  
+  background-color: $red;
+  color: $yellow;
 }
+
+.options:focus {
+  background-color: $red;
+}
+
+#search::placeholder {
+  color: $yellow;
+
+}
+
+
 
