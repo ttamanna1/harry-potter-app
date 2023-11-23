@@ -10,6 +10,7 @@ import App from './App'
 import Home from './components/Home'
 import CharIndex from './components/CharIndex'
 import CharCard from './components/CharCard'
+import ErrorPage from './components/ErrorPage'
 
 import { getAllChars, getSingleChar} from './utilities/loaders/char'
 
@@ -17,6 +18,7 @@ const router = createBrowserRouter([
   {
     path: '/',
     element: <App />,
+    errorElement: <ErrorPage />,
     children: [
       {
         path: '/',

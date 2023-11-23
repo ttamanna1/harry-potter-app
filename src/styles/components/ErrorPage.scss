@@ -1,0 +1,9 @@
+#error-page {
+  @include flex-center(row);
+}
+
+#root {
+  display: flex;
+  justify-content: space-between;
+
+}
