@@ -9,7 +9,7 @@ export default function CharCard(){
   return (
     <>
       <div className='crest-card'>
-        <img src={`../src/styles/images/${house}.jpeg`}/>
+        <img id='crest' src={`../src/styles/images/${house}.png`}/>
         <div className='card-wrapper'>
           <div className="card" id={house}>
             <img className="card-img-top" src={image} alt="Card image"/>
@@ -27,6 +27,7 @@ export default function CharCard(){
           </div>
           <Link className='btn btn-red back' to="/charIndex">Back</Link>
         </div>
+        <img id='crest' src={`../src/styles/images/${house}.png`}/>
       </div>
     </>
   )

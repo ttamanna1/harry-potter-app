@@ -11,8 +11,10 @@ import Home from './components/Home'
 import CharIndex from './components/CharIndex'
 import CharCard from './components/CharCard'
 import ErrorPage from './components/ErrorPage'
+import SpellIndex from './components/SpellIndex'
 
 import { getAllChars, getSingleChar} from './utilities/loaders/char'
+import { getAllSpells } from './utilities/loaders/spells'
 
 const router = createBrowserRouter([
   {
@@ -33,6 +35,11 @@ const router = createBrowserRouter([
         path: 'charIndex/:charId',
         element: <CharCard />,
         loader: async ({ params }) => getSingleChar(params.charId)
+      },
+      {
+        path: '/spellIndex',
+        element: <SpellIndex />,
+        loader: getAllSpells
       }
     ]
   }

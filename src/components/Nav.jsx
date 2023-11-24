@@ -24,6 +24,7 @@ export default function Nav(){
           <nav onClick={() => setShow(false)}>
             <Link to="/"><i>Home</i></Link>
             <Link to="/charIndex"><i>Characters</i></Link>
+            <Link to="/spellIndex">Spells</Link>
           </nav>
         </Modal.Header>
       </Modal>

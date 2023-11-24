@@ -1,0 +1,26 @@
+
+.spell-list {
+  justify-content: center;
+  .box {
+    border: 1px $yellow solid;
+    margin: 0.5em;
+  }
+
+  
+  div {
+    height: 30vw;
+    color: $yellow;
+    font-size: 1em;
+    @include flex-center(column);
+    text-align: center;
+
+    h2 {
+      font-size: 2em;
+    }
+    
+    p {
+    font-size: 0.9em;
+    }
+  }
+}
+

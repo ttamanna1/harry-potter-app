@@ -1,5 +1,9 @@
 .crest-card {
-  @include flex-center(row)
+  @include flex-center(row);
+  
+  #crest {
+    width: 30%;
+  }
 }
 
 .card-wrapper {
@@ -56,14 +60,14 @@
 
 #Hufflepuff {
   background-color: #ecb939;
-  border: 1px #726255 solid;
+  border: 1px #aaaaaa solid;
   div h5 {
-    color: #726255;
+    color: #aaaaaa;
   }
   ul li {
     background-color: #ecb939;
-    color: #726255;
-    border: 1px #726255 solid;
+    color: #aaaaaa;
+    border: 1px #aaaaaa solid;
   }
 }
 
