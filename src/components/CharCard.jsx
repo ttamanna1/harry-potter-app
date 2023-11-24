@@ -1,4 +1,8 @@
 import { useLoaderData, Link } from 'react-router-dom'
+import Gryffindor from '../styles/images/Gryffindor.png'
+import Slytherin from '../styles/images/Slytherin.png'
+import Ravenclaw from '../styles/images/Ravenclaw.png'
+import Hufflepuff from '../styles/images/Hufflepuff.png'
 
 export default function CharCard(){
   const char = useLoaderData()
@@ -6,10 +10,12 @@ export default function CharCard(){
   const { image, name, house, wizard, patronus, wand } = char[0]
   console.log(image, name, house, wizard, patronus, wand)
 
+  const crests = {Gryffindor, Ravenclaw, Hufflepuff, Slytherin}
+
   return (
     <>
       <div className='crest-card'>
-        <img id='crest' src={`../src/styles/images/${house}.png`}/>
+        <img id='crest' src={crests[house]}/>
         <div className='card-wrapper'>
           <div className="card" id={house}>
             <img className="card-img-top" src={image} alt="Card image"/>
@@ -27,7 +33,7 @@ export default function CharCard(){
           </div>
           <Link className='btn btn-red back' to="/charIndex">Back</Link>
         </div>
-        <img id='crest' src={`../src/styles/images/${house}.png`}/>
+        <img id='crest' src={crests[house]}/>
       </div>
     </>
   )
