@@ -19,7 +19,7 @@ export default function SpellIndex() {
     useEffect(() => {
 
       // Regex pattern that allows us to run a test on all the countries to see if pattern was found
-      const pattern = new RegExp(filter.search, 'i')
+      const pattern = new RegExp(filter, 'i')
       const filteredArray = spells.filter(spell => {
         return pattern.test(spell.name)
       })
@@ -28,13 +28,9 @@ export default function SpellIndex() {
     }, [filter])
 
       // ! Functions
-  function handleChange(e){
-    // complex data types must first be severed from the initial reference
-    // const newArray = [...filter,
-    //   [e.target.name]: e.target.value]
-    setFilter([...filter, e.target.value])
+  function handleChange(e) {
+    setFilter(e.target.value)
     } 
-    // newObj[e.target.name] = e.target.value
 
   return (
     <>
