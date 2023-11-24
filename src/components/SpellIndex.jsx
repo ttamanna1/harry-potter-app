@@ -15,17 +15,16 @@ export default function SpellIndex() {
   const [ filter, setFilter ] = useState()
   const [ filteredSpells, setFilteredSpells ] = useState([])
 
-      // ! Effects
-    useEffect(() => {
+    // ! Effects
+  useEffect(() => {
 
-      // Regex pattern that allows us to run a test on all the countries to see if pattern was found
-      const pattern = new RegExp(filter, 'i')
-      const filteredArray = spells.filter(spell => {
-        return pattern.test(spell.name)
-      })
-      setFilteredSpells(filteredArray)
-  
-    }, [filter])
+    const pattern = new RegExp(filter, 'i')
+    const filteredArray = spells.filter(spell => {
+      return pattern.test(spell.name)
+    })
+    setFilteredSpells(filteredArray)
+
+  }, [filter])
 
       // ! Functions
   function handleChange(e) {
@@ -38,7 +37,7 @@ export default function SpellIndex() {
       <Container fluid>
         <Row>
           <Col xs={6} md={4} lg={3}>
-            <input id="search" name="search" placeholder='Search...' value={filter} onChange={handleChange} />
+            <input id="spell-search" name="search" placeholder='Search...' value={filter} onChange={handleChange} />
           </Col>
         </Row>
         <Row className='spell-list'>

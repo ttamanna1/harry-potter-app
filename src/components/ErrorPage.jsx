@@ -11,7 +11,6 @@ export default function ErrorPage() {
     <>
       <Nav />
         <div id="error-page">
-          {/* <h1><i>{error.statusText || error.message}</i></h1> */}
           <p>Sorry, the magic has failed. Please try again later.</p>
         </div>
       <Footer />

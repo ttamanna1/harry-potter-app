@@ -13,14 +13,44 @@
     font-size: 1em;
     @include flex-center(column);
     text-align: center;
-
     h2 {
-      font-size: 2em;
+      font-size: 1.3em;
     }
-    
     p {
-    font-size: 0.9em;
+    font-size: 0.6em;
+    }
+    @media (min-width: 768px) {
+      h2 {
+        font-size: 1.8em;
+      }
+      p {
+      font-size: 0.7em;
+      }
+    }
+    @media (min-width: 992px) {
+      h2 {
+        font-size: 2em;
+      }
+      p {
+      font-size: 0.8em;
+      }
     }
   }
+}
+
+#spell-search {
+  height: 45px;
+  width: 180px;
+  border: 1px solid $red;
+  margin-left: 100px;
+  padding-left: 0.5rem;
+  background-color: $red;
+  color: $yellow;
+  font-size: 35px;
+  text-shadow: 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black;
+}
+
+#spell-search::placeholder {
+  color: $yellow;
 }
 

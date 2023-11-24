@@ -21,31 +21,27 @@ export default function CharIndex() {
 
   // ! Functions
   function handleChange(e){
-    // complex data types must first be severed from the initial reference
     const newObj = { 
       ...filters,
       [e.target.name]: e.target.value
     } 
-    // newObj[e.target.name] = e.target.value
     setFilters(newObj)
   }
 
-    // ! Effects
-    useEffect(() => {
+  // ! Effects
+  useEffect(() => {
 
-      // Regex pattern that allows us to run a test on all the countries to see if pattern was found
-      const pattern = new RegExp(filters.search, 'i')
-      const filteredArray = charWithImg.filter(char => {
-        return pattern.test(char.name) && (char.house === filters.house || filters.house === 'All')
-      })
-      setFilteredHouses(filteredArray)
-  
-      // Use the countries to create a list of regions for the dropdown (only when countries first available)
-      if (charWithImg.length > 0 && houses.length === 0) {
-        const housesArr = [...new Set(charWithImg.map(char => char.house))].filter(Boolean)
-        setHouses(housesArr)
-      }
-    }, [filters])
+    const pattern = new RegExp(filters.search, 'i')
+    const filteredArray = charWithImg.filter(char => {
+      return pattern.test(char.name) && (char.house === filters.house || filters.house === 'All')
+    })
+    setFilteredHouses(filteredArray)
+
+    if (charWithImg.length > 0 && houses.length === 0) {
+      const housesArr = [...new Set(charWithImg.map(char => char.house))].filter(Boolean)
+      setHouses(housesArr)
+    }
+  }, [filters])
 
 
   return (
@@ -57,7 +53,6 @@ export default function CharIndex() {
             <div className="custom-select">
               <select id="dropdown" name="house" value={filters.house} onChange={handleChange}>
                 <option value="All">All</option>
-                {/* Render the options */}
                 { houses.length > 0 &&
                   houses.map(house => {
                     return <option key={house} value={house}>{house}</option>
