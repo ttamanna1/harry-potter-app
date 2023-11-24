@@ -1,6 +1,9 @@
+.crest-card {
+  @include flex-center(row)
+}
+
 .card-wrapper {
   @include flex-center(column);
-  // display: none;
   .card {
     width: 18rem;
     text-transform: capitalize;
@@ -25,5 +28,54 @@
     padding: 0.2rem 1rem;
 }
 
+#Gryffindor {
+  background-color: $red;
+  border: 1px $yellow solid;
+  div h5 {
+    color: $yellow;
+  }
+  ul li {
+    background-color: $red;
+    color: $yellow;
+    border: 1px $yellow solid;
+  }
+}
 
+#Ravenclaw {
+  background-color: #222f5b;
+  border: 1px #5d5d5d solid;
+  div h5 {
+    color: #5d5d5d;
+  }
+  ul li {
+    background-color: #222f5b;
+    color: #5d5d5d;
+    border: 1px #5d5d5d solid;
+  }
+}
 
+#Hufflepuff {
+  background-color: #ecb939;
+  border: 1px #726255 solid;
+  div h5 {
+    color: #726255;
+  }
+  ul li {
+    background-color: #ecb939;
+    color: #726255;
+    border: 1px #726255 solid;
+  }
+}
+
+#Slytherin {
+  background-color: #2a623d;
+  border: 1px #aaaaaa solid;
+  div h5 {
+    color: #aaaaaa;
+  }
+  ul li {
+    background-color: #2a623d;
+    color: #aaaaaa;
+    border: 1px #aaaaaa solid;
+  }
+}
