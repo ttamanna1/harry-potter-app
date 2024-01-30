@@ -10,7 +10,6 @@ export default function CharIndex() {
   const char = useLoaderData()
   const charWithImg = char.filter(char => char.image)
 
-
   // ! State
   const [ filters, setFilters ] = useState({
     house: 'All',
